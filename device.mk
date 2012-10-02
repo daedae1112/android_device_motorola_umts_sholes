@@ -112,8 +112,7 @@ PRODUCT_PACKAGES += \
     usbd \
     HwaSettings \
     make_ext4fs \
-    fs_mgr \
-    2nd-init
+    fs_mgr
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
@@ -139,7 +138,11 @@ PRODUCT_COPY_FILES += \
     device/motorola/umts_sholes/prebuilt/etc/rootfs/init.rc:/system/etc/rootfs/init.rc \
     device/motorola/umts_sholes/prebuilt/etc/rootfs/init.mapphone_umts.rc:/system/etc/rootfs/init.mapphone_umts.rc \
     device/motorola/umts_sholes/prebuilt/etc/rootfs/ueventd.rc:/system/etc/rootfs/ueventd.rc \
+<<<<<<< HEAD
     device/motorola/umts_sholes/prebuilt/etc/rootfs/fstab.sholes:/system/etc/rootfs/fstab.sholes \
+=======
+    device/motorola/umts_sholes/prebuilt/bin/2nd-init:/system/bin/2nd-init \
+>>>>>>> 2fc5566... use non-prebuilt 2nd-init (old version collided with TLS enabled)
     device/motorola/umts_sholes/prebuilt/bin/init_bp_nvm.sh:/system/bin/init_bp_nvm.sh \
     device/motorola/umts_sholes/prebuilt/bin/init_early_bind_mounts.sh:/system/bin/init_early_bind_mounts.sh \
     device/motorola/umts_sholes/prebuilt/bin/install_tool.sh:/system/bin/install_tool.sh \
