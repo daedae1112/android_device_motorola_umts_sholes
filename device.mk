@@ -22,15 +22,14 @@ $(call inherit-product-if-exists, vendor/motorola/umts_sholes/device-vendor.mk)
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.com.android.wifi-watchlist=GoogleGuest \
 	ro.setupwizard.enterprise_mode=1 \
-        ro.com.google.clientid=android-motorola \
-	ro.com.google.clientidbase=android-motorola \
+        ro.com.google.clientid=android-skt-kr \
+	ro.com.google.clientidbase=android-skt-kr \
 	ro.com.google.locationfeatures=1 \
 	ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
 	ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
-	ro.config.vc_call_vol_steps=7 \
+	ro.config.vc_call_vol_steps=9 \
 	ro.telephony.call_ring.multiple=false \
 	ro.telephony.call_ring.delay=3000 \
-	ro.url.safetylegal=http://www.motorola.com/staticfiles/Support/legal/?model=A853 \
 	ro.setupwizard.enable_bypass=1 \
 	dalvik.vm.lockprof.threshold=500 \
 	dalvik.vm.dexopt-flags=m=y \
@@ -100,7 +99,6 @@ PRODUCT_PACKAGES += \
     camera.sholes \
     Usb \
     Torch \
-    FileManager \
     mot_boot_mode \
     charge_only_mode \
     usbd
@@ -134,7 +132,6 @@ PRODUCT_COPY_FILES += \
     device/motorola/umts_sholes/prebuilt/usr/keychars/sholes-keypad.kcm:/system/usr/keychars/sholes-keypad.kcm \
     device/motorola/umts_sholes/prebuilt/usr/keychars/cpcap-key.kcm:/system/usr/keychars/cpcap-key.kcm \
     device/motorola/umts_sholes/prebuilt/usr/keylayout/sholes-keypad.kl:/system/usr/keylayout/sholes-keypad.kl \
-    device/motorola/umts_sholes/prebuilt/usr/keylayout/sholes-keypad-ru_qwerty.kl:/system/usr/keylayout/sholes-keypad-ru_qwerty.kl \
     device/motorola/umts_sholes/prebuilt/usr/keylayout/cpcap-key.kl:/system/usr/keylayout/cpcap-key.kl \
     device/motorola/umts_sholes/prebuilt/usr/keylayout/qtouch-touchscreen.kl:/system/usr/keylayout/qtouch-touchscreen.kl \
     device/motorola/umts_sholes/prebuilt/usr/idc/qtouch-touchscreen.idc:/system/usr/idc/qtouch-touchscreen.idc \
@@ -146,9 +143,7 @@ PRODUCT_COPY_FILES += \
     device/motorola/umts_sholes/prebuilt/lib/modules/omaplfb.ko:/system/lib/modules/omaplfb.ko \
     device/motorola/umts_sholes/prebuilt/lib/modules/tiwlan_drv.ko:/system/lib/modules/tiwlan_drv.ko \
     device/motorola/umts_sholes/prebuilt/lib/modules/tiap_drv.ko:/system/lib/modules/tiap_drv.ko \
-    device/motorola/umts_sholes/prebuilt/lib/modules/slow-work.ko:/system/lib/modules/slow-work.ko \
     device/motorola/umts_sholes/prebuilt/lib/modules/iptable_raw.ko:/system/lib/modules/iptable_raw.ko \
-    device/motorola/umts_sholes/prebuilt/lib/modules/xt_multiport.ko:/system/lib/modules/xt_multiport.ko \
     device/motorola/umts_sholes/prebuilt/lib/modules/xt_tcpmss.ko:/system/lib/modules/xt_tcpmss.ko \
     device/motorola/umts_sholes/prebuilt/lib/modules/xt_TCPMSS.ko:/system/lib/modules/xt_TCPMSS.ko \
     device/motorola/umts_sholes/prebuilt/lib/modules/ip6_tables.ko:/system/lib/modules/ip6_tables.ko \
@@ -160,12 +155,7 @@ PRODUCT_COPY_FILES += \
     device/motorola/umts_sholes/prebuilt/lib/modules/xt_owner2.ko:/system/lib/modules/xt_owner2.ko \
     device/motorola/umts_sholes/prebuilt/lib/modules/overclock.ko:/system/lib/modules/overclock.ko \
     device/motorola/umts_sholes/prebuilt/lib/modules/cpufreq_interactive.ko:/system/lib/modules/cpufreq_interactive.ko \
-    device/motorola/umts_sholes/prebuilt/lib/modules/cpufreq_smartass.ko:/system/lib/modules/cpufreq_smartass.ko \
-    device/motorola/umts_sholes/prebuilt/lib/modules/cpufreq_conservative.ko:/system/lib/modules/cpufreq_conservative.ko \
     device/motorola/umts_sholes/prebuilt/lib/modules/cpufreq_stats.ko:/system/lib/modules/cpufreq_stats.ko \
-    device/motorola/umts_sholes/prebuilt/lib/modules/jbd2.ko:/system/lib/modules/jbd2.ko \
-    device/motorola/umts_sholes/prebuilt/lib/modules/ext4.ko:/system/lib/modules/ext4.ko \
-    device/motorola/umts_sholes/prebuilt/lib/modules/tun.ko:/system/lib/modules/tun.ko \
     device/motorola/umts_sholes/prebuilt/lib/modules/cifs.ko:/system/lib/modules/cifs.ko \
     device/motorola/umts_sholes/prebuilt/lib/modules/nls_utf8.ko:/system/lib/modules/nls_utf8.ko \
     device/motorola/umts_sholes/prebuilt/lib/modules/lockd.ko:/system/lib/modules/lockd.ko \
@@ -173,8 +163,7 @@ PRODUCT_COPY_FILES += \
     device/motorola/umts_sholes/prebuilt/lib/modules/rpcsec_gss_krb5.ko:/system/lib/modules/rpcsec_gss_krb5.ko \
     device/motorola/umts_sholes/prebuilt/lib/modules/sunrpc.ko:/system/lib/modules/sunrpc.ko \
     device/motorola/umts_sholes/prebuilt/lib/modules/nfs.ko:/system/lib/modules/nfs.ko \
-    device/motorola/umts_sholes/prebuilt/lib/modules/touchlc.ko:/system/lib/modules/touchlc.ko \
-    device/motorola/umts_sholes/prebuilt/lib/modules/dsprecovery.ko:/system/lib/modules/dsprecovery.ko
+    device/motorola/umts_sholes/prebuilt/lib/modules/touchlc.ko:/system/lib/modules/touchlc.ko
 
 # use high-density artwork where available
 PRODUCT_LOCALES += hdpi

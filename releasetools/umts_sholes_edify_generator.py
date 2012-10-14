@@ -85,14 +85,6 @@ class EdifyGenerator(object):
     self.script.append(('assert(!less_than_int(%s, '
                         'getprop("ro.build.date.utc")));') % (timestamp,))
 
-  def AssertDevice(self, device):
-    """Assert that the device identifier is the given string."""
-    cmd = ('assert(' + 
-           ' || \0'.join(['getprop("ro.product.device") == "%s" || getprop("ro.build.product") == "%s" || getprop("ro.product.board") == "%s"'
-                         % (i, i, i) for i in device.split(",")]) + 
-           ');')
-    self.script.append(self._WordWrap(cmd))
-
   def AssertSomeBootloader(self, *bootloaders):
     """Asert that the bootloader version is one of *bootloaders."""
     cmd = ("assert(" +
@@ -106,26 +98,8 @@ class EdifyGenerator(object):
     self.script.append('set_perm(0, 0, 0777, "/tmp/install_tool.sh");')
     self.script.append('run_program("/tmp/install_tool.sh");')
 
-  def AddLib2extSymlink(self):
-    self.script.append('symlink("/system/etc/init.d/08lib2ext", "/system/xbin/lib2ext");')
-
   def AddLiba2dpSymlink(self):
     self.script.append('symlink("/system/lib/hw/audio.a2dp.default.so", "/system/lib/liba2dp.so");')
-
-  def RunBackup(self, command):
-    self.script.append('package_extract_file("system/bin/backuptool.sh", "/tmp/backuptool.sh");')
-    self.script.append('set_perm(0, 0, 0777, "/tmp/backuptool.sh");')
-    self.script.append(('run_program("/tmp/backuptool.sh", "%s");' % command))
-
-  def RunModelidCfg(self):
-    self.script.append('package_extract_file("system/bin/modelid_cfg.sh", "/tmp/modelid_cfg.sh");')
-    self.script.append('set_perm(0, 0, 0777, "/tmp/modelid_cfg.sh");')
-    self.script.append('run_program("/tmp/modelid_cfg.sh");')
-
-  def RunVerifyCachePartitionSize(self):
-    self.script.append('package_extract_file("system/bin/verify_cache_partition_size.sh", "/tmp/verify_cache_partition_size.sh");')
-    self.script.append('set_perm(0, 0, 0777, "/tmp/verify_cache_partition_size.sh");')
-    self.script.append('run_program("/tmp/verify_cache_partition_size.sh");')
 
   def ShowProgress(self, frac, dur):
     """Update the progress bar, advancing it over 'frac' over the next

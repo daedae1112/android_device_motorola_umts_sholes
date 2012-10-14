@@ -72,7 +72,7 @@ $SED -i \
 	$REPACK/ota/system/build.prop
 
 # Include prebuilt boot.img
-cp $ANDROID_BUILD_TOP/vendor/motorola/umts_sholes/proprietary/boot.img $REPACK/ota/
+#cp $ANDROID_BUILD_TOP/vendor/motorola/umts_sholes/proprietary/boot.img $REPACK/ota/
 
 # Rootfs stuff
 mkdir -p $REPACK/ota/system/etc/rootfs/sbin

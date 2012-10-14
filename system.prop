@@ -7,8 +7,9 @@ rild.libargs=-d /dev/ttyS0
 ro.sf.lcd_density=240
 
 # Default network type.
+# 2 -> WCDMA Only
 # 3 -> GSM/WCDMA (auto mode, according to PRL)
-ro.telephony.default_network=3
+ro.telephony.default_network=2
 
 ro.telephony.ril_class=MotoWrigley3GRIL
 
@@ -22,7 +23,7 @@ wifi.hotspot.ti = 1
 # Time between scans in seconds. Keep it high to minimize battery drain.
 # This only affects the case in which there are remembered access points,
 # but none are in range.
-wifi.supplicant_scan_interval = 45
+wifi.supplicant_scan_interval = 150
 
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
@@ -36,7 +37,7 @@ hwui.whitelist=0
 hwui.blacklist=none
 
 # This is a high density device with more memory, so larger vm heaps for it.
-dalvik.vm.heapsize=30m
+dalvik.vm.heapsize=36m
 
 # store dalvik-cache of everything in /data
 dalvik.vm.dexopt-data-only=0
@@ -48,7 +49,7 @@ mot.proximity.delay=450
 mot.proximity.distance=100
 
 # to spare some RAM
-persist.sys.purgeable_assets=1
+persist.sys.purgeable_assets=0
 
 # apps to be kept in memory (specified by process name)
 # use with caution, RAM is limited!
@@ -56,30 +57,30 @@ sys.keep_app_1=
 sys.keep_app_2=
 
 # kcm filename prefix
-ro.sys.keypad_prefix=sholes-keypad-
+#ro.sys.keypad_prefix=sholes-keypad-
 
 # primary keycharmap
-persist.sys.keypad_pri=euro_qwerty
+#persist.sys.keypad_pri=euro_qwerty
 
 # secondary keycharmap
-persist.sys.keypad_sec=none
+#persist.sys.keypad_sec=none
 
 # max interval for key multipress (ms)
-persist.sys.keypad_multipress_t=500
+#persist.sys.keypad_multipress_t=500
 
 # language for key multipress
-persist.sys.keypad_multipress_l=auto
+#persist.sys.keypad_multipress_l=auto
 
-persist.sys.qtouch_num=2
+persist.sys.qtouch_num=4
 
-persist.sys.one_percent_batt=1
+persist.sys.one_percent_batt=0
 
 ro.usb.use_custom_service=1
 
 # debug.sf.nobootanimation=1
 
 # enable 16bit transparency by default
-persist.sys.use_16bpp_alpha=1
+persist.sys.use_16bpp_alpha=0
 
 # when set to 1, Google Maps NetworkLocationService
 # (designed to be constantly running since gmaps 5.1.0)
@@ -89,7 +90,7 @@ persist.sys.use_16bpp_alpha=1
 # to automatically report your location (bye bye, free RAM)
 persist.sys.gmaps_hack=1
 
-windowsmgr.max_events_per_sec=60
+windowsmgr.max_events_per_sec=300
 
 # The interfaces to get DNS data from when using mobile data, comma-separated
 mobiledata.interfaces=rmnet0
@@ -99,14 +100,14 @@ mobiledata.interfaces=rmnet0
 ro.ringtone_query_wait_time=1500
 
 # Logger properties
-persist.service.aplogd.enable=1
+#persist.service.aplogd.enable=1
 
 #  max single log file size in MB (default is 10)
-aplogd.logfile.size=5
+#aplogd.logfile.size=5
 
 #  single buffers to be collected (0 - disabled)
-aplogd.collect.main=1
-aplogd.collect.kernel=1
-aplogd.collect.radio=1
-aplogd.collect.events=1
+#aplogd.collect.main=1
+#aplogd.collect.kernel=1
+#aplogd.collect.radio=1
+#aplogd.collect.events=1
 
