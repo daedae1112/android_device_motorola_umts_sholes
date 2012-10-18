@@ -21,23 +21,20 @@ $(call inherit-product-if-exists, vendor/motorola/umts_sholes/device-vendor.mk)
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.com.android.wifi-watchlist=GoogleGuest \
-	ro.error.receiver.system.apps=com.google.android.feedback \
 	ro.setupwizard.enterprise_mode=1 \
-        ro.com.google.clientid=android-motorola \
-	ro.com.google.clientidbase=android-motorola \
+        ro.com.google.clientid=android-skt-kr \
+	ro.com.google.clientidbase=android-skt-kr \
 	ro.com.google.locationfeatures=1 \
 	ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
 	ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
 	ro.config.vc_call_vol_steps=7 \
 	ro.telephony.call_ring.multiple=false \
 	ro.telephony.call_ring.delay=3000 \
-	ro.url.safetylegal=http://www.motorola.com/staticfiles/Support/legal/?model=A853 \
 	ro.setupwizard.enable_bypass=1 \
-	ro.media.dec.jpeg.memcap=20000000 \
 	dalvik.vm.lockprof.threshold=500 \
 	dalvik.vm.dexopt-flags=m=y \
         ro.product.multi_touch_enabled=true \
-        ro.product.max_num_touch=5 \
+        ro.product.max_num_touch=8 \
         ro.com.google.gmsversion=2.3_r4
 
 DEVICE_PACKAGE_OVERLAYS += device/motorola/umts_sholes/overlay
@@ -72,7 +69,6 @@ libaudiohw_legacy audio.primary.sholes
 
 PRODUCT_PACKAGES += \
     e2fsck \
-    MilestoneParts \
     librs_jni \
     tiwlan.ini \
     dspexec \
@@ -105,7 +101,6 @@ PRODUCT_PACKAGES += \
     camera.sholes \
     Usb \
     Torch \
-    Toggle2G \
     FileManager \
     mot_boot_mode \
     charge_only_mode \
@@ -128,9 +123,6 @@ PRODUCT_COPY_FILES += \
     device/motorola/umts_sholes/prebuilt/etc/init.d/10overclock:/system/etc/init.d/10overclock \
     device/motorola/umts_sholes/prebuilt/etc/init.d/01sysctl:/system/etc/init.d/01sysctl \
     device/motorola/umts_sholes/prebuilt/etc/init.d/01sysctl:/system/etc/init.d/05mountsd \
-    device/motorola/umts_sholes/prebuilt/etc/init.d/07app2ext:/system/etc/init.d/07app2ext \
-    device/motorola/umts_sholes/prebuilt/etc/init.d/08lib2ext:/system/etc/init.d/08lib2ext \
-    device/motorola/umts_sholes/prebuilt/etc/init.d/60autoboot_or:/system/etc/init.d/60autoboot_or \
     device/motorola/umts_sholes/prebuilt/etc/location.cfg:/system/etc/location.cfg \
     device/motorola/umts_sholes/prebuilt/etc/powervr.ini:/system/etc/powervr.ini \
     device/motorola/umts_sholes/prebuilt/etc/gpsconfig.xml:/system/etc/gpsconfig.xml \
@@ -140,7 +132,6 @@ PRODUCT_COPY_FILES += \
     device/motorola/umts_sholes/prebuilt/etc/rootfs/init.mapphone_umts.rc:/system/etc/rootfs/init.mapphone_umts.rc \
     device/motorola/umts_sholes/prebuilt/etc/rootfs/ueventd.rc:/system/etc/rootfs/ueventd.rc \
     device/motorola/umts_sholes/prebuilt/bin/2nd-init:/system/bin/2nd-init \
-    device/motorola/umts_sholes/prebuilt/bin/init_bp_nvm.sh:/system/bin/init_bp_nvm.sh \
     device/motorola/umts_sholes/prebuilt/bin/init_early_bind_mounts.sh:/system/bin/init_early_bind_mounts.sh \
     device/motorola/umts_sholes/prebuilt/bin/install_tool.sh:/system/bin/install_tool.sh \
     device/motorola/umts_sholes/prebuilt/bin/sh_hijack.sh:/system/bin/sh_hijack.sh \
@@ -157,10 +148,8 @@ PRODUCT_COPY_FILES += \
     device/motorola/umts_sholes/prebuilt/lib/modules/pvr-off.ko:/system/lib/modules/pvr-off.ko \
     device/motorola/umts_sholes/prebuilt/lib/modules/pvrsrvkm.ko:/system/lib/modules/pvrsrvkm.ko \
     device/motorola/umts_sholes/prebuilt/lib/modules/omaplfb.ko:/system/lib/modules/omaplfb.ko \
-    device/motorola/umts_sholes/prebuilt/lib/modules/mot_usb.ko:/system/lib/modules/mot_usb.ko \
     device/motorola/umts_sholes/prebuilt/lib/modules/tiwlan_drv.ko:/system/lib/modules/tiwlan_drv.ko \
     device/motorola/umts_sholes/prebuilt/lib/modules/tiap_drv.ko:/system/lib/modules/tiap_drv.ko \
-    device/motorola/umts_sholes/prebuilt/lib/modules/dsifix.ko:/system/lib/modules/dsifix.ko \
     device/motorola/umts_sholes/prebuilt/lib/modules/slow-work.ko:/system/lib/modules/slow-work.ko \
     device/motorola/umts_sholes/prebuilt/lib/modules/iptable_raw.ko:/system/lib/modules/iptable_raw.ko \
     device/motorola/umts_sholes/prebuilt/lib/modules/xt_multiport.ko:/system/lib/modules/xt_multiport.ko \
@@ -188,10 +177,8 @@ PRODUCT_COPY_FILES += \
     device/motorola/umts_sholes/prebuilt/lib/modules/rpcsec_gss_krb5.ko:/system/lib/modules/rpcsec_gss_krb5.ko \
     device/motorola/umts_sholes/prebuilt/lib/modules/sunrpc.ko:/system/lib/modules/sunrpc.ko \
     device/motorola/umts_sholes/prebuilt/lib/modules/nfs.ko:/system/lib/modules/nfs.ko \
-    device/motorola/umts_sholes/prebuilt/lib/modules/qtouch_num.ko:/system/lib/modules/qtouch_num.ko \
-    device/motorola/umts_sholes/prebuilt/lib/modules/dsprecovery.ko:/system/lib/modules/dsprecovery.ko \
-    device/motorola/umts_sholes/prebuilt/vendor/app/.holder:/system/vendor/app/.holder \
-    device/motorola/umts_sholes/prebuilt/vendor/lib/.holder:/system/vendor/lib/.holder
+    device/motorola/umts_sholes/prebuilt/lib/modules/touchlc.ko:/system/lib/modules/touchlc.ko \
+    device/motorola/umts_sholes/prebuilt/lib/modules/dsprecovery.ko:/system/lib/modules/dsprecovery.ko 
 
 # use high-density artwork where available
 PRODUCT_LOCALES += hdpi
