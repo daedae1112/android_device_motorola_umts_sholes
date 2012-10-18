@@ -125,10 +125,6 @@ setprop ro.sys.atvc_allow_efem 0
 # This is needed by any process that uses socket tagging.
     chmod 0644 /dev/xt_qtaguid
 
-on fs
-    mount_all /fstab.sholes
-    export SECONDARY_STORAGE /mnt/sd-ext
-
 on early-boot
 
     chmod 0666 /dev/DspBridge
@@ -320,7 +316,8 @@ mount rootfs rootfs / ro remount
 # Start services
     class_start pre-zygote_services
 
-exec /system/bin/mot_boot_mode
+on property:cm.mountsd.done=1
+    exec /system/bin/mot_boot_mode
 
 # Set core max size (2G)
     setrlimit 4 2147483648 2147483648
