@@ -14,7 +14,7 @@ on init
 # Create mountpoints and mount tmpfs
     mkdir /pds 0775 system system
     mkdir /tmp 0777 system system
-    mount tmpfs tmpfs /tmp size=32k
+    mount tmpfs tmpfs /tmp size=2m
 
 # Configure kernel options
     # Enable automatic power control for EHCI USB IPC
