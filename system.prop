@@ -53,21 +53,6 @@ persist.sys.purgeable_assets=0
 sys.keep_app_1=
 sys.keep_app_2=
 
-# kcm filename prefix
-#ro.sys.keypad_prefix=sholes-keypad-
-
-# primary keycharmap
-#persist.sys.keypad_pri=euro_qwerty
-
-# secondary keycharmap
-#persist.sys.keypad_sec=none
-
-# max interval for key multipress (ms)
-#persist.sys.keypad_multipress_t=500
-
-# language for key multipress
-#persist.sys.keypad_multipress_l=auto
-
 persist.sys.qtouch_num=4
 
 persist.sys.one_percent_batt=0
