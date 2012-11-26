@@ -68,7 +68,6 @@ libaudioutils audio.a2dp.default audio_policy.sholes \
 libaudiohw_legacy audio.primary.sholes
 
 PRODUCT_PACKAGES += \
-    e2fsck \
     librs_jni \
     tiwlan.ini \
     dspexec \
@@ -101,14 +100,14 @@ PRODUCT_PACKAGES += \
     camera.sholes \
     Usb \
     Torch \
-    FileManager \
     mot_boot_mode \
     charge_only_mode \
     usbd \
-    HwaSettings \
-    make_ext4fs \
-    fs_mgr
-
+    HwaSettings 
+#    make_ext4fs 
+#    fs_mgr
+#    FileManager 
+#    e2fsck 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 
@@ -130,7 +129,6 @@ PRODUCT_COPY_FILES += \
     device/motorola/umts_sholes/prebuilt/etc/rootfs/init.rc:/system/etc/rootfs/init.rc \
     device/motorola/umts_sholes/prebuilt/etc/rootfs/init.mapphone_umts.rc:/system/etc/rootfs/init.mapphone_umts.rc \
     device/motorola/umts_sholes/prebuilt/etc/rootfs/ueventd.rc:/system/etc/rootfs/ueventd.rc \
-    device/motorola/umts_sholes/prebuilt/etc/rootfs/fstab.sholes:/system/etc/rootfs/fstab.sholes \
     device/motorola/umts_sholes/prebuilt/bin/2nd-init:/system/bin/2nd-init \
     device/motorola/umts_sholes/prebuilt/bin/init_early_bind_mounts.sh:/system/bin/init_early_bind_mounts.sh \
     device/motorola/umts_sholes/prebuilt/bin/install_tool.sh:/system/bin/install_tool.sh \
