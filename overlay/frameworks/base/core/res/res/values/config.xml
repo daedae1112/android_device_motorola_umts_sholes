@@ -132,8 +132,8 @@ should be empty. -->
     
     <!-- XXXXXX END OF RESOURCES USING WRONG NAMING CONVENTION -->
 
-    <!-- The number of degrees to rotate the display when the keyboard is open. -->
-    <integer name="config_lidOpenRotation">90</integer>
+    <!-- The number of degrees to rotate the display when the keyboard is open. 
+    <integer name="config_lidOpenRotation">90</integer>-->
 
     <!-- The number of degrees to rotate the display when the device is in a desk dock.
          A value of -1 means no change in orientation by default. -->
@@ -168,14 +168,14 @@ should be empty. -->
     <!-- Indicate whether the lid state impacts the accessibility of
          the physical keyboard.  0 means it doesn't, 1 means it is accessible
          when the lid is open, 2 means it is accessible when the lid is
-         closed.  The default is 1. -->
-    <integer name="config_lidKeyboardAccessibility">1</integer>
+         closed.  The default is 1. 
+    <integer name="config_lidKeyboardAccessibility">1</integer>-->
 
     <!-- Indicate whether the lid state impacts the accessibility of
          the physical keyboard.  0 means it doesn't, 1 means it is accessible
          when the lid is open, 2 means it is accessible when the lid is
-         closed.  The default is 0. -->
-    <integer name="config_lidNavigationAccessibility">1</integer>
+         closed.  The default is 0. 
+    <integer name="config_lidNavigationAccessibility">1</integer>-->
 
     <!-- Indicate whether the SD card is accessible without removing the battery. -->
     <bool name="config_batterySdCardAccessibility">false</bool>
@@ -235,14 +235,14 @@ should be empty. -->
     <!-- Close low battery warning when battery level reaches this value -->
     <integer name="config_lowBatteryCloseWarningLevel">20</integer>
 
-    <!-- Default color for notification LED. -->
-    <color name="config_defaultNotificationColor">#ff00ff00</color>
+    <!-- Default color for notification LED. 
+    <color name="config_defaultNotificationColor">#ff00ff00</color>-->
 
-    <!-- Default LED on time for notification LED in milliseconds. -->
-    <integer name="config_defaultNotificationLedOn">500</integer>
+    <!-- Default LED on time for notification LED in milliseconds. 
+    <integer name="config_defaultNotificationLedOn">500</integer>-->
 
-    <!-- Default LED off time for notification LED in milliseconds. -->
-    <integer name="config_defaultNotificationLedOff">2000</integer>
+    <!-- Default LED off time for notification LED in milliseconds. 
+    <integer name="config_defaultNotificationLedOff">2000</integer>-->
 
     <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveNotificationLed">false</bool>
@@ -291,13 +291,13 @@ should be empty. -->
     <!-- Array of output values for keyboard backlight corresponding to the LUX values
          in the config_autoBrightnessLevels array.  This array should have size one greater
          than the size of the config_autoBrightnessLevels array.
-         This must be overridden in platform specific overlays -->
+         This must be overridden in platform specific overlays
     <integer-array name="config_autoBrightnessKeyboardBacklightValues">
         <item>255</item>
         <item>255</item>
         <item>0</item>
         <item>0</item>
-    </integer-array>
+    </integer-array>-->
 
     <!-- Flag indicating whether the button and keyboard backlights need the light
          sensor always enabled. 
