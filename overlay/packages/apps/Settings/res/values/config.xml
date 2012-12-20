@@ -20,3 +20,9 @@
     <!-- Show dock settings -->
     <bool name="has_dock_settings">false</bool>
 </resources>
+
+<resources>
+ 	 2	
+  <bool name="config_show_expandedDesktop">true</bool>
+ 	 3	
+</resources>
