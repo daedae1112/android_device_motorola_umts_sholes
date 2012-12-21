@@ -338,8 +338,8 @@ should be empty. -->
     <bool name="config_bluetooth_sco_off_call">true</bool>
 
     <!-- Boolean indicating if current platform supports quick switch-on/off of
-Bluetooth Module -->
-    <bool name="config_bluetooth_adapter_quick_switch">false</bool>
+Bluetooth Module 
+    <bool name="config_bluetooth_adapter_quick_switch">false</bool>-->
 
     <!-- The default data-use polling period. -->
     <integer name="config_datause_polling_period_sec">600</integer>
@@ -378,9 +378,9 @@ Bluetooth Module -->
     <bool name="config_screenOffAnimation">false</bool>
 
     <!-- Possible names from /devices/virtual/switch/dock for a dock device.
-Some kernels use names like CAR and DESK. -->
+Some kernels use names like CAR and DESK. 
     <string-array translatable="false" name="config_accessoryDockNames">
         <item>"CAR"</item>
         <item>"DESK"</item>
-    </string-array>
+    </string-array>-->
 </resources>
