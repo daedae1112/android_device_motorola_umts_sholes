@@ -67,6 +67,9 @@ hcitool hciattach hcidump \
 libaudioutils audio.a2dp.default audio_policy.sholes \
 libaudiohw_legacy audio.primary.sholes
 
+# Bluetooth
+PRODUCT_PACKAGES += libbt-vendor
+
 PRODUCT_PACKAGES += \
     librs_jni \
     tiwlan.ini \

@@ -104,6 +104,10 @@ BOARD_USE_FROYO_LIBCAMERA := true
 
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/motorola/umts_sholes/bluetooth
+BOARD_BLUETOOTH_LIBBT_VNDCFG := device/motorola/umts_sholes/bluetooth/bt_vendor.conf
+BOARD_BLUEDROID_VENDOR_CONF := device/moto/jordan-common/bluetooth/vnd_moto-omap3.txt
+
 
 BOARD_EGL_CFG := device/motorola/umts_sholes/egl.cfg
 
